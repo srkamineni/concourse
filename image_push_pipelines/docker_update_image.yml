@@ -38,4 +38,5 @@ jobs:
         path: build
   - put: simple-image
     params:
+      tag_as_latest: true
       image: image/image.tar
