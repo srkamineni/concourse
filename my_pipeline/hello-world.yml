@@ -2,7 +2,7 @@ resources:
 - name: repo
   type: git
   source:
-    uri: https://github.com/srkamineni/concourse.git
+    uri: git@github.com:srkamineni/concourse.git
 
 jobs:
 - name: hello-world-job
