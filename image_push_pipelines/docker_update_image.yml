@@ -39,6 +39,6 @@ jobs:
         path: build
   - put: simple-image
     params:
-      tag_file: 1.0.0
+      version: 1.0.0
       tag_as_latest: true
       image: image/image.tar
