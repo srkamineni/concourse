@@ -29,7 +29,7 @@ jobs:
           args:
           - -c
           - > 
-            cat ./automation/group.yml ./automation/fist_pipeline.yml ./automation/pipeline/cf.yml > pipeline/pipeline.yml
+            cat ./group.yml ./fist_pipeline.yml ./pipeline/cf.yml > pipeline/pipeline.yml
     - set_pipeline: self 
       file: pipeline/pipeline.yml
 
