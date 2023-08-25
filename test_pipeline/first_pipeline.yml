@@ -25,7 +25,7 @@ jobs:
         outputs:
           - name: pipeline
         run:
-          path: /bin/sh
+          path: sh
           args:
           - -exc
           - | 
