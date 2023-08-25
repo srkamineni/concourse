@@ -13,7 +13,7 @@ jobs:
     - get: automation
       trigger: true
     - task: create-pipeline
-      timeout: 1m
+      timeout: 20m
       config:
         platform: linux
         image_resource:
