@@ -1,0 +1,36 @@
+resources:
+- name: automation
+  check_every: 2m
+  type: git
+  source:
+    branch: main
+    uri: https://github.com/srkamineni/concourse.git
+
+jobs:
+- name: update-pipeline
+  serial: true
+  plan:
+    - get: automation
+      trigger: true
+    - task: create-pipeline
+      timeout: 1m
+      config:
+        platform: linux
+        image_resource:
+          type: registry-image
+          source:
+            repository: busybox
+        inputs:
+          - name: automation
+        outputs:
+          - name: pipeline
+        run:
+          path: /bin/sh
+          args:
+          - -c
+          - > 
+            cat ./group.yml fist_pipeline.yml pipeline/cf.yml > pipeline/pipeline.yml
+    - set_pipeline: self 
+      file: pipeline/pipeline.yml
+
+

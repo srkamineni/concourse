@@ -4,7 +4,7 @@ resources:
   type: git
   icon: github
   source:
-    uri: https://github.com/srkamineni/concourse.git
+    uri: git@github.com:srkamineni/concourse.git
     branch: main 
 
 # test Where we will push the image
@@ -12,7 +12,7 @@ resources:
   type: registry-image
   icon: docker
   source:
-    tag: "1.0.2"
+    tag: "1.0.4"
     repository: ((image-repo-name))/simple-image
     username: ((registry-username))
     password: ((registry-password))

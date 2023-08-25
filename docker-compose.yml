@@ -10,7 +10,7 @@ services:
       PGDATA: /database
 
   concourse:
-    image: concourse/concourse
+    image: rdclda/concourse:7.9.0
     command: quickstart
     privileged: true
     depends_on: [concourse-db]
@@ -32,3 +32,6 @@ services:
       CONCOURSE_CLUSTER_NAME: tutorial
       CONCOURSE_WORKER_CONTAINERD_DNS_SERVER: "8.8.8.8"
       CONCOURSE_WORKER_RUNTIME: "containerd"
+      CONCOURSE_GITHUB_CLIENT_ID: f8c9a74b83ffb6b2986a
+      CONCOURSE_GITHUB_CLIENT_SECRET: 24ad347bf2f04c148cc028290db6a2bb632ef36a 
+      CONCOURSE_GITHUB_HOST: github.com 

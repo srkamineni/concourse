@@ -1,13 +1,15 @@
 resources:
-- name: repo
+- name: srkamineni_repo
   type: git
   source:
-    uri: git@github.com:srkamineni/concourse.git
+    branch: main
+    #password: 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
+    uri: https://github.com/srkamineni/concourse.git
 
 jobs:
 - name: hello-world-job
   plan:
-  - get: repo
+  - get: srkamineni_repo
     trigger: true
   - task: hello-world-task
     config:
@@ -18,4 +20,4 @@ jobs:
           repository: busybox
       run:
         path: echo
-        args: ["Hello World!"]
+        args: ["Hello World SAP!"]

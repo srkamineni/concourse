@@ -1,0 +1,14 @@
+- name: upgrade-cf
+  serial: true
+  plan:
+    - get: automation
+      passed: [update-pipeline]
+      trigger: true
+      run:
+        # This is a neat way of embedding a script into a task
+        path: sh
+        args:
+        - -cx
+        - |
+          ls -l .
+          echo "hello from upgrade-cf" 
