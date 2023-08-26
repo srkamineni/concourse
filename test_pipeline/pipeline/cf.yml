@@ -2,7 +2,7 @@
   serial: true
   plan:
     - get: automation
-      passed: [update-pipelie]
+      passed: [update-pipeline]
       trigger: true
     - task: update-submodule
       config:
