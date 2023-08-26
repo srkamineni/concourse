@@ -31,5 +31,5 @@ jobs:
           - | 
             echo " I am here listing files" 
             ls -ltr 
-            cat ./group.yml ./fist_pipeline.yml ./pipeline/cf.yml > pipeline/pipeline.yml
+            cat ./automation/group.yml ./automation/fist_pipeline.yml ./automation/pipeline/cf.yml > pipeline/pipeline.yml
 
