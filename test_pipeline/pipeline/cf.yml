@@ -3,7 +3,6 @@
   plan:
     - get: automation
       passed: [update-pipeline]
-      trigger: true
     - task: update-submodule
       config:
         platform: linux
