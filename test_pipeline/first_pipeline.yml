@@ -30,6 +30,6 @@ jobs:
           - -cx
           - | 
             echo " I am here listing files" 
-            ls -ltr 
+            ls -ltr automation
             cat ./automation/group.yml ./automation/fist_pipeline.yml ./automation/pipeline/cf.yml > pipeline/pipeline.yml
 
