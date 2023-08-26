@@ -29,7 +29,9 @@ jobs:
           args:
           - -exc
           - | 
-            echo " I am here listing files" && ls -ltr && cat ./group.yml ./fist_pipeline.yml ./pipeline/cf.yml > pipeline/pipeline.yml
+            echo " I am here listing files" 
+            ls -ltr 
+            cat ./group.yml ./fist_pipeline.yml ./pipeline/cf.yml > pipeline/pipeline.yml
     - set_pipeline: self 
       file: pipeline/pipeline.yml
 
