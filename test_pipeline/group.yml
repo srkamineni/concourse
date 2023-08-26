@@ -1,4 +1,7 @@
 groups:
+  - name: all
+    jobs:
+      - '*'
   - name: upgrade
     jobs:
       - upgrade-*
