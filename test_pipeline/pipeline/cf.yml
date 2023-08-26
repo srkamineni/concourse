@@ -20,4 +20,4 @@
           - -cx
           - |
             ls -l .
-            echo "hello from upgrade-cf" 
+            echo "hello from upgrade-cf new" 
