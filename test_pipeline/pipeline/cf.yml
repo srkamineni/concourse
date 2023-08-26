@@ -4,6 +4,7 @@
     - get: automation
       passed: [update-pipeline]
       trigger: true
+    - task: update-submodule
       config:
         platform: linux
         image_resource:
