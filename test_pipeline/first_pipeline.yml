@@ -21,9 +21,9 @@ jobs:
           source:
             repository: busybox
         inputs:
-          - name: automation
+        - name: automation
         outputs:
-          - name: pipeline
+        - name: pipeline
         run:
           path: sh
           args:
