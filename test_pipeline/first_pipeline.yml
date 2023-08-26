@@ -31,5 +31,7 @@ jobs:
           - | 
             echo " I am here listing files" 
             ls -ltr automation
-            cat ./automation/group.yml ./automation/fist_pipeline.yml ./automation/pipeline/cf.yml > pipeline/pipeline.yml
+            cat ./automation/test_pipeline/group.yml ./automation/test_pipeline/fist_pipeline.yml ./automation/test_pipeline/pipeline/cf.yml > pipeline/pipeline.yml
+    - set_pipeline: self
+      file: pipeline/pipeline.yml
 
