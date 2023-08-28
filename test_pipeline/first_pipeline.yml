@@ -31,8 +31,6 @@ jobs:
           - | 
             echo " I am here listing files" 
             ls -ltr automation
-            echo "1" > README.md 
-            git add README.md;git commit -m "dummy commit" -a;git push
             cat ./automation/test_pipeline/group.yml ./automation/test_pipeline/first_pipeline.yml ./automation/test_pipeline/pipeline/cf.yml > pipeline/pipeline.yml
             cat pipeline/pipeline.yml
     - set_pipeline: self
