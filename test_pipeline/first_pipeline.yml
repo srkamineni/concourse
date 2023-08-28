@@ -30,7 +30,7 @@ jobs:
           - -cx
           - | 
             cat ./automation/test_pipeline/group.yml ./automation/test_pipeline/first_pipeline.yml ./automation/test_pipeline/pipeline/cf.yml > pipeline/pipeline.yml
-            ipkg install git
+            opkg-install curl bash git sshtunnel
             git clone automation modified-automation
             cd modified-automation
             echo "force other groups to run " >> concourse-dummy.txt
