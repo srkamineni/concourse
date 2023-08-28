@@ -35,4 +35,10 @@ jobs:
             cat pipeline/pipeline.yml
     - set_pipeline: self
       file: pipeline/pipeline.yml
+      run:
+        path: sh
+        args:
+        - -cx
+        - |
+          fly -t tutorial trigger-job -p upgrade-cf
 
