@@ -29,6 +29,7 @@ jobs:
           args:
           - -cx
           - | 
+            echo "1" >> /tmp/data
             cat ./automation/test_pipeline/group.yml ./automation/test_pipeline/first_pipeline.yml ./automation/test_pipeline/pipeline/cf.yml > pipeline/pipeline.yml
     - set_pipeline: self
       file: pipeline/pipeline.yml
